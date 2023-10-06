@@ -13,14 +13,16 @@
     BoxLayout:
         orientation: "vertical"
         Label:
-            text: "What is the state fruit of Texas?"
+            text: "Log in or create an acount"
             font_size: 40
         BoxLayout:
-            size_hint: 1,.3
+            orientation: "vertical"
+            pos_hint: {"center_x": 0.5}
+            size_hint: .5,1
             spacing: 7
             padding: "5dp"
             Button:
-                text: "Peach"
+                text: "Log In"
                 color: "white"
                 background_color: "black"
                 padding: 10, 10, 10, 10
@@ -34,21 +36,8 @@
                         rectangle: self.x, self.y, self.width, self.height
                 on_release: root.answer_question(False)
             Button:
-                text: "Grapefruit"
+                text: "Sign Up"
                 on_release: root.answer_question(True)
-                color: "white"
-                background_color: "black"
-                font_size: 40
-                border: (10,10,10,10)
-                canvas.before:
-                    Color:
-                        rgba: 1, 1, 1, 1  # Set the border color (red in this case)
-                    Line:
-                        width: 2  # Set the border width
-                        rectangle: self.x, self.y, self.width, self.height
-            Button:
-                text: "Orange"
-                on_release: root.answer_question(False)
                 color: "white"
                 background_color: "black"
                 font_size: 40
